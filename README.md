@@ -3,3 +3,6 @@
 # Ideas 
 - Wildfire detections system
 - 
+
+
+# Technology
