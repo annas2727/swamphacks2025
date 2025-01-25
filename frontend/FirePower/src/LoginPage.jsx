@@ -1,9 +1,11 @@
 import React from 'react'
+import Navbar from "./components/Navbar"
 
 import LoginButton from './components/LoginButton'; 
 import LogoutButton from './components/LogoutButton';
 
 function LoginPage() {
+
     console.log("LoginPage")
     return (           
         <main className = "column"> 
