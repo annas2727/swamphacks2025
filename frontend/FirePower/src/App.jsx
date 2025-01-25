@@ -11,6 +11,7 @@ import { Auth0Provider } from '@auth0/auth0-react'
 
 function App() {
   const [count, setCount] = useState(0)
+<<<<<<< HEAD
   const domain = import.meta.env.VITE_AUTH0_DOMAIN; 
   const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
 
@@ -32,6 +33,17 @@ function App() {
     </BrowserRouter>
     </Auth0Provider>
     
+=======
+  
+  return ( 
+  <Routes>
+  
+    <Route path="/" element={<LoginPage />} />
+    <Route path="/camera" element={<CameraPage />} />
+    <Route path="/dash" element={<Dashboard/>} />
+
+  </Routes>
+>>>>>>> 48178c19ea12d24de7d02f41fef04417baf669e0
   )
 }
 
