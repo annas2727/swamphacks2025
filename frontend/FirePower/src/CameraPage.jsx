@@ -85,7 +85,7 @@ function CameraPage() {
         <>
             <Navbar/>
             <div>
-                <p>Camera View</p>
+                <p>Camera View Testing</p>
                 <button onClick={getMedia} color="#841584">Click Me</button>
 
             </div>
