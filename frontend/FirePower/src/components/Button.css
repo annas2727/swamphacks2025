@@ -12,10 +12,3 @@
     transform: translateX(-50%);
 }
 
-.login-button { 
-    top: calc(40% + 60px);
-}
-
-.logout-button { 
-    top: calc(40% + 120px);
-}

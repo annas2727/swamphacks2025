@@ -85,9 +85,9 @@ function CameraPage() {
         <>
             <Navbar/>
             <div>
-                <p>Camera View Testing</p>
+                <p>Camera View</p>
                 <button onClick={getMedia} color="#841584">Click Me</button>
-
+                <video className = "block mx-auto " id="videoElement" autoPlay></video>
             </div>
             
         </>

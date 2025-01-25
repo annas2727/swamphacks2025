@@ -1,9 +1,12 @@
 import React, { useEffect ,useState } from 'react'
 import Navbar from './components/Navbar';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function Dashboard() {
     const [UserLocation, setUserLocation] = useState({});
     const [Weather, setWeather] = useState('');
+    const { loginWithRedirect, isAuthenticated } =  useAuth0();
+    
 
     const getUserLocation = () => {
         if (navigator.geolocation) {
@@ -58,7 +61,7 @@ function Dashboard() {
 
     return (
     <>
-    <Navbar/>
+    {!isAuthenticated && <Navbar/>}
 <div className="grid grid-cols-6 grid-rows-7 gap-4 min-h-screen">
     <div className="col-span-4 col-start-2 text-center border-2 rounded-sm">DashBoard</div>
     <div className="col-span-2 row-span-2 col-start-2 row-start-2 text-center border-2 rounded-sm">Last Check</div>
