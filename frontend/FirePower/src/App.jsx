@@ -1,32 +1,24 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import LoginPage from './LoginPage';
+import CameraPage from './CameraPage';
+import Dashboard from './Dashboard';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Router>
-      <div>
-        {/* Navigation links (optional) */}
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </nav>
-
-        {/* Define routes */}
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/contact" component={ContactPage} />
-        </Switch>
-      </div>
-    </Router>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={LoginPage} />
+      <Route path="/camera" element={CameraPage} />
+      <Route path="/dash" element={Dashboard} />
+      
+    </Routes>
+  </BrowserRouter>
   )
 }
 
