@@ -66,7 +66,10 @@ function Dashboard() {
         <p className="text-white">{Weather}</p>
 
     </div>
-    <div className="col-span-4 row-span-2 col-start-2 row-start-6 text-center border-2 rounded-sm">Contact Authorities</div>
+    <div className="col-span-4 row-span-2 col-start-2 row-start-6 text-center border-2 rounded-sm">
+        <h1>Authorities</h1> 
+        <p className="text-white">Filler</p>
+    </div>
 </div>
      </>
     )
