@@ -9,16 +9,15 @@ import Dashboard from './Dashboard';
 
 function App() {
   const [count, setCount] = useState(0)
+  
+  return ( 
+  <Routes>
+  
+    <Route path="/" element={<LoginPage />} />
+    <Route path="/camera" element={<CameraPage />} />
+    <Route path="/dash" element={<Dashboard/>} />
 
-  return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/camera" element={<CameraPage />} />
-      <Route path="/dash" element={<Dashboard/>} />
-
-    </Routes>
-  </BrowserRouter>
+  </Routes>
   )
 }
 
