@@ -1,0 +1,21 @@
+.button { 
+    border-color: rgb(6, 213, 6);
+    font-size: 32px;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px; 
+    border-width: 2px; 
+    border-style: solid; 
+    cursor: pointer; 
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.login-button { 
+    top: calc(40% + 60px);
+}
+
+.logout-button { 
+    top: calc(40% + 120px);
+}

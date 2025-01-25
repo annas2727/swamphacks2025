@@ -3,7 +3,6 @@ import Navbar from './components/Navbar'
 
 import './CameraPage.css'
 function CameraPage() {
-    
     async function getMedia(){
         const constraints = {
             audio: true,
@@ -13,7 +12,9 @@ function CameraPage() {
         let stream = null;
         const videoElement = document.getElementById('videoElement');
         try {
+
             stream = await navigator.mediaDevices.getUserMedia(constraints);
+
             videoElement.srcObject = stream;
             let isRecording = false;
     
@@ -57,6 +58,7 @@ function CameraPage() {
             }
             startRecordingSession(); 
             setInterval(startRecordingSession, 20000); 
+          
         } catch (err) {
           /* handle the error */
             console.log("We are cooked chat");
@@ -85,7 +87,7 @@ function CameraPage() {
             <div>
                 <p>Camera View</p>
                 <button onClick={getMedia} color="#841584">Click Me</button>
-                <video className = "block mx-auto " id="videoElement" autoPlay></video>
+
             </div>
             
         </>
