@@ -1,19 +1,22 @@
 import React from 'react'
 import Navbar from './components/navBar'
+import socketio from "socket.io-client";
 import './CameraPage.css'
 function CameraPage() {
-
-    const constraints = {
-        audio: true,
-        video: true
-    };
-
-    async function getMedia(constraints) {
+    
+    
+    async function getMedia(){
+        const constraints = {
+            audio: true,
+            video: true
+        };
         console.log("test")
         let stream = null;
+        const videoElement = document.getElementById('videoElement');
         try {
             stream = await navigator.mediaDevices.getUserMedia(constraints);
             console.log(stream)
+            videoElement.srcObject = stream;
           /* use the stream */
             
         } catch (err) {
@@ -27,7 +30,8 @@ function CameraPage() {
             <Navbar/>
             <div>
                 <p>Camera View</p>
-                <button onClick={getMedia(constraints)} color="#841584">Click Me</button>
+                <button onClick={getMedia} color="#841584">Click Me</button>
+                <video className = "block mx-auto " id="videoElement" autoPlay></video>
             </div>
             
         </>

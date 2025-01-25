@@ -1,4 +1,7 @@
+
 import React, { useEffect ,useState } from 'react'
+import Navbar from './components/navBar'
+
 
 function Dashboard() {
     const [UserLocation, setUserLocation] = useState({});
@@ -69,6 +72,10 @@ function Dashboard() {
     <div className="col-span-4 row-span-2 col-start-2 row-start-6 text-center border-2 rounded-sm">Contact Authorities</div>
 </div>
      </>
+
+        <div>
+            <Navbar/>
+            Dashboard</div>
     )
 }
 
