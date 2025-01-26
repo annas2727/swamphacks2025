@@ -4,6 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from './components/LoginButton'; 
 import LogoutButton from './components/LogoutButton';
 import Navbar from './components/Navbar';
+import firelogo from './assets/firelogo.jpg';
 
 
 
@@ -15,7 +16,8 @@ function LoginPage() {
         <>
         {console.log(isAuthenticated)}
         {isAuthenticated&&<Navbar/>}
-            <main className = "column"> 
+            <main className = "column">             
+                <img src={firelogo} className = "logo"alt="Fire Logo" />
                 <h1>FlameFinder</h1>
                 <LoginButton />
                 <LogoutButton />
