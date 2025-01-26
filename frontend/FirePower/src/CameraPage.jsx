@@ -1,8 +1,17 @@
 import React from 'react'
+<<<<<<< HEAD
 import Navbar from './components/Navbar'
 
 import './CameraPage.css'
 function CameraPage() {
+=======
+import Navbar from './components/navBar'
+import socketio from "socket.io-client";
+import './CameraPage.css'
+function CameraPage() {
+    
+    
+>>>>>>> a103d5e9b873474bb66f057f5a14004a2d49f345
     async function getMedia(){
         const constraints = {
             audio: true,
@@ -12,10 +21,10 @@ function CameraPage() {
         let stream = null;
         const videoElement = document.getElementById('videoElement');
         try {
-
             stream = await navigator.mediaDevices.getUserMedia(constraints);
 
             videoElement.srcObject = stream;
+<<<<<<< HEAD
             let isRecording = false;
     
             // Function to handle a single recording session
@@ -59,6 +68,10 @@ function CameraPage() {
             startRecordingSession(); 
             setInterval(startRecordingSession, 20000); 
           
+=======
+          /* use the stream */
+            
+>>>>>>> a103d5e9b873474bb66f057f5a14004a2d49f345
         } catch (err) {
           /* handle the error */
             console.log("We are cooked chat");

@@ -16,6 +16,7 @@
     "firebase": "^11.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "socketio": "^1.0.0",
     "tailwindcss": "^4.0.0"
   },
   "devDependencies": {

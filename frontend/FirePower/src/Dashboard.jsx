@@ -1,6 +1,12 @@
+
 import React, { useEffect ,useState } from 'react'
+<<<<<<< HEAD
 import Navbar from './components/Navbar';
 import { useAuth0 } from '@auth0/auth0-react';
+=======
+import Navbar from './components/navBar'
+
+>>>>>>> a103d5e9b873474bb66f057f5a14004a2d49f345
 
 function Dashboard() {
     const [UserLocation, setUserLocation] = useState({});
@@ -101,6 +107,10 @@ function Dashboard() {
     </div>
 </div>
      </>
+
+        <div>
+            <Navbar/>
+            Dashboard</div>
     )
 }
 

@@ -3,3 +3,41 @@ body{
     color: rgb(6, 213, 6);
     font-size: 32px;
 }
+<<<<<<< HEAD
+=======
+
+h1 { 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; 
+    width: 100vw;
+    margin-top: -10vh; 
+    font-size: 48px;
+}
+
+p { 
+    font-size: 24px;
+    text-align: center;
+    position: flex; 
+    margin-top: -20vh; 
+    padding: 0 20px; 
+    text-align: center; 
+}
+
+.logo { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    width: 50px; 
+    height: auto; 
+    cursor: pointer; 
+}
+
+.logo:hover { 
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out; 
+}
+>>>>>>> a103d5e9b873474bb66f057f5a14004a2d49f345
