@@ -24,8 +24,30 @@ function Dashboard() {
         }
     };
 
+    async function getLatestVid() {
+        try {
+            const response =  await fetch('http://localhost:8000/latest', {
+                method: 'GET'
+            });
+            const contentType = response.headers.get('content-type');
+            if(response == 200){
+
+            }
+            else{
+                const result = await response.json();
+                console.log("MAYDAYMAYDAYMAYDAY")
+                console.log(result)
+            }r 
+    }
+
+    catch(error){
+        console.log(error)
+        console.log("Error fetching video")
+    }
+}
     useEffect(() => {
         getUserLocation();
+        getLatestVid();
     }, []); 
 
     useEffect(() => {
@@ -64,7 +86,9 @@ function Dashboard() {
     {!isAuthenticated && <Navbar/>}
 <div className="grid grid-cols-6 grid-rows-7 gap-4 min-h-screen">
     <div className="col-span-4 col-start-2 text-center border-2 rounded-sm">DashBoard</div>
-    <div className="col-span-2 row-span-2 col-start-2 row-start-2 text-center border-2 rounded-sm">Last Check</div>
+    <div className="col-span-2 row-span-2 col-start-2 row-start-2 text-center border-2 rounded-sm">Last Check
+    <video></video>
+    </div>
     <div className="col-span-2 row-span-2 col-start-4 row-start-2 text-center border-2 rounded-sm">Fire Probability</div>
     <div className="col-span-4 row-span-2 col-start-2 row-start-4 text-center border-2 rounded-sm">
         <h1>Weather</h1>
